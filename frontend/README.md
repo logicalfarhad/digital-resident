@@ -63,13 +63,13 @@ Billion Towers is a cutting-edge real estate platform that combines modern web t
    git clone https://github.com/0xbigital/digital-resident.git
    cd digital-resident
    ```
-
-2. Install dependencies:
+2. Navigate to frontend
+3. Install dependencies:
    ```bash
    npm install
    ```
 
-3. Start the server
+4. Start the server
 ```bash
   npm start
 ```

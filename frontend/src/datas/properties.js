@@ -11,7 +11,8 @@ const propertiies = [
     price: "300",
     profit: 15.6,
     returns: 10.21,
-    investors: 534
+    investors: 534,
+    isEthProperty: true
   }//,
   // {
   //   id: 2,

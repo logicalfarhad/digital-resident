@@ -1,0 +1,175 @@
+/* Your original CSS - KEEP EXACTLY AS IS */
+:root {
+  --blue: #006EFF;
+  --darkBlue: #12417E;
+}
+
+.property {
+  max-width: 380px;
+  border-radius: 8px;
+  margin: 16px;
+  /*remove*/
+  box-shadow: 8px 8px rgba(0, 0, 0, .1);
+}
+
+.property-image {
+  border-radius: 12px;
+}
+
+.property-image img {
+  width: 100%;
+}
+
+.property h3,
+.property p {
+  margin: 0;
+}
+
+.property-details {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 16px;
+}
+
+.property-details-2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.property-details-2-l h3 {
+  text-align: left;
+}
+
+.property-details-2-r h3 {
+  text-align: right;
+}
+
+.property-details-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.profit {
+  color: var(--blue);
+}
+
+.profitability {
+  color: lightGray;
+}
+
+.invest-button {
+  padding: 12px 32px;
+  border: 0;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: var(--blue);
+  cursor: pointer
+}
+
+/* ================================================================ */
+/* Add extra css to display price in USD */
+/* ================================================================ */
+
+/* Add position relative for badge positioning */
+.property-image {
+  position: relative;
+}
+
+/* ETH Badge - only for visual identification */
+.eth-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--blue);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  box-shadow: 0 2px 4px rgba(0, 110, 255, 0.2);
+}
+
+.eth-icon {
+  font-size: 0.8rem;
+}
+
+/* Price section layout */
+.price-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.price-section .eth-price {
+  margin: 0;
+}
+
+.usd-price {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Simple text colors for price direction - no background changes */
+.usd-price.price-up {
+  color: #16a34a;
+}
+
+.usd-price.price-down {
+  color: #dc2626;
+}
+
+.usd-price.loading {
+  color: #6b7280;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.usd-price.error {
+  color: #ef4444;
+  font-size: 0.8rem;
+}
+
+/* Loading spinner */
+.usd-price.loading::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #6b7280;
+  border-top: 1px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 6px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .eth-badge {
+    padding: 3px 6px;
+    font-size: 0.6rem;
+  }
+
+  .usd-price {
+    font-size: 0.8rem;
+  }
+}
