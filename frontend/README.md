@@ -60,7 +60,7 @@ Billion Towers is a cutting-edge real estate platform that combines modern web t
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/0xbigital/digital-resident.git
+   git clone https://github.com/logicalfarhad/digital-resident.git
    cd digital-resident
    ```
 2. Navigate to frontend
